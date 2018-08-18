@@ -77,13 +77,14 @@ colnames(mbind) <- varnames
 names(mbind) <- sub("^t", "timeDomain", names(mbind))
 names(mbind) <- sub("^f", "frequencyDomain", names(mbind))
 names(mbind) <- sub("Acc", "Accelerometer", names(mbind))
-names(mbind) <- sub("Gyro", "Geroscope", names(mbind))
+names(mbind) <- sub("Gyro", "Gyroscope", names(mbind))
 names(mbind) <- sub("Mag", "Magnitude", names(mbind))
 names(mbind) <- sub("mean", "Mean", names(mbind))
+names(mbind) <- sub("std", "StandardDeviation", names(mbind))
 names(mbind) <- sub("Freq", "Frequency", names(mbind))
 names(mbind) <- gsub("-", "", names(mbind))
 names(mbind) <- sub("\\(\\)", "", names(mbind))
-names(mbind) <- sub("BodyBody", "body", names(mbind))
+names(mbind) <- sub("BodyBody", "Body", names(mbind))
 
 ## 5.From the data set in step 4, creates a second, independent tidy data set 
 ##   with the average of each variable for each activity and each subject.
